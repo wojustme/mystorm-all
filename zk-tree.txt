@@ -1,0 +1,34 @@
+mystorm							=> 项目根路径
+	-nodes
+		-master		      => 集群master节点注册信息
+		-workers				=> 集群中所有的worker节点
+			-worker-1			=> 集群中workerId的worker节点，设置
+			-worker-...
+				-executor-1
+	-topologies				=> 集群中所有的拓扑结构
+		-topology-1			=> 集群中拓扑id为1的拓扑结构，存储每个拓扑的状态信息，工作在哪些worker节点
+			-status       => 当前topology状态
+			-comp-1       => topology任务下载情况
+			-comp-2
+		-topology-...
+	-assignments			=> 任务分配
+		-worker-1				=>
+			-task-1				=>
+			-task-2				=>
+		-worker-2				=>
+
+
+
+
+worker节点存储数据
+	name
+  allNum
+	activeNum
+
+
+executor节点存储数据
+	name
+	type
+	allTaskNum
+	activeTaskNum
+
